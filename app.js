@@ -39,7 +39,7 @@ app.post("/", function (request, response) {
 
     const options = {
         method: "POST",
-        auth: "k_ayush:3ae048087cd184be1b971232b9e77ff1-us20"
+        auth: "k_ayush:bdf0f657815d40c1d1525f9a16330eed-us20"
     }
 
     const req = https.request(url, options, function (res) {
@@ -68,7 +68,3 @@ app.listen(process.env.PORT || 3000, function () {
 });
 
 
-//API Key
-// 3ae048087cd184be1b971232b9e77ff1-us20
-
-// var list_id =78ef80ad34
