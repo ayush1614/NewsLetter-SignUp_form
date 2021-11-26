@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
-const { resourceLimits } = require("worker_threads");
+// const { resourceLimits } = require("worker_threads");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,16 +11,14 @@ app.use(express.static("public"));  // use to  display images and loads static c
 
 app.get("/", function (request, response) {
     response.sendFile(__dirname + "/index.html");
-})
+}) ;
 
 app.post("/", function (request, response) {
 
     // console.log(request.body);
-
     const fname = request.body.Fname;
     const lname = request.body.Lname;
     const email = request.body.Email;
-
 
     var data = {
         members: [
@@ -65,7 +63,7 @@ app.post("/failure.html" , function(request,response){
 })
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server started on port 3000");
 });
 

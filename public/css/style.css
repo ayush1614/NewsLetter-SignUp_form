@@ -32,12 +32,13 @@ body {
   border-bottom-left-radius: 0;
 }
 
-.middle{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.middle {
+  border-radius: 0;
+  margin-bottom: -1px;
+  
 }
 
-.bottom{
+.bottom {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
