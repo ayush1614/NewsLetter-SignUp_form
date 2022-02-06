@@ -35,7 +35,7 @@ app.post("/", function (request, response) {
 
     var jsonData = JSON.stringify(data);   // because we need to send the data in compact form
 
-    const url = "https://us20.api.mailchimp.com/3.0/lists/78ef80ad34";
+    const url = "https://us20.api.mailchimp.com/3.0/lists/{ListId}";
 
     const options = {
         method: "POST",
